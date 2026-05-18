@@ -13,6 +13,10 @@
         <h2 class="subtitle">GRAND KNOCKOUT STAGE</h2>
     </div>
 
+    <div style="text-align: center; margin-bottom: 30px;">
+        <button class="blue-btn" onclick="startDrawing()">🎲 DRAW TEAMS (ACAK JURUSAN)</button>
+    </div>
+
     <div class="bracket-container">
         <div class="round quarter-finals">
             <h3 class="round-title">QUARTER FINALS</h3>
@@ -105,12 +109,22 @@
 
         <div class="round champion-round">
             <h3 class="round-title gold-text">CHAMPION</h3>
-            
             <div class="champion-box">
                 <input type="text" id="champion" placeholder="🏆 THE WINNER 🏆" readonly>
             </div>
-            
             <button class="reset-btn" onclick="resetBracket()">🔄 RESET BRACKET</button>
+        </div>
+    </div>
+
+    <div id="draw-modal" class="modal hidden">
+        <div class="modal-content-large">
+            <h2 style="color: var(--neon-blue); letter-spacing: 5px; margin-top: 0;">LIVE DRAWING</h2>
+            <h3 id="draw-target" style="color: #ccc; font-weight: normal;">Menentukan: Quarter Final 1</h3>
+            
+            <div id="draw-result" class="slot-machine-text">???</div>
+            
+            <button id="next-draw-btn" class="blue-btn hidden" onclick="drawNext()">LANJUT DRAW ⏭️</button>
+            <button id="close-draw-btn" class="red-btn hidden" onclick="closeDrawing()">SELESAI</button>
         </div>
     </div>
 
